@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <errno.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <string.h>
+#include "ftrace_util.h"
 
 
 
@@ -152,13 +147,4 @@ void clear_trace(){ //clears /sys/kernel/tracing/trace
      write(fd2, "nop", 3);
 
      close(fd2);
-}
-
-int main(){
-    
-    
-    
-    setup_tracer();
-    printf("ftrace\n");
-    disable_tracing();
 }
